@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .special-message {
+            color: red;
+            animation: blinker 1s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
 </head>
 <body>
     <h1>年代選択</h1>
@@ -21,7 +32,7 @@
         <option value="外食以外">外食以外</option>
     </select>
 
-    <button onclick="displayMessage()">送信</button>
+    <button onclick="displayMessage(); return false;">送信</button>
 
     <p id="message"></p>
 
